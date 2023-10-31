@@ -16,7 +16,8 @@ export default function Home() {
   const childRef: any = useRef();
   const doClick = () => childRef?.current?.doClick();
   return (
-    <div className="">
+    <div className="flex items-center justify-center">
+    <div className="w-6/12">
       <button
         className="p-2 rounded bg-blue-900 text-white"
         onClick={() => {
@@ -48,6 +49,6 @@ export default function Home() {
           })}
         </div>
       </div>
-    </div>
+    </div></div>
   );
 }

@@ -1,15 +1,14 @@
-"use client";
-import Image from "next/image";
+"use client"; 
 import {
   createRef,
   useEffect,
   useRef,
   useImperativeHandle,
   forwardRef,
-} from "react";
-import { Card } from "./Card";
+} from "react"; 
+import Card from "./Card";
 
-export const CardWrapper = forwardRef((props: any, passedRef: any) => {
+  const CardWrapper = forwardRef((props: any, passedRef: any) => {
   const { colors = [], currentIndex = 0, loading } = props;
   const ref: any = useRef([]);
   const currentRef = useRef(0);
@@ -34,7 +33,7 @@ export const CardWrapper = forwardRef((props: any, passedRef: any) => {
   let currentDD: any = sds.current;
   useEffect(() => {
     currentDD && loading ? (currentDD.className = "bay-card-wrapper") : "";
-  }, []);
+  }, [currentDD,loading]);
 
   return (
     <div ref={sds} className={`${loading && "bay-card-wrapper"}`}>
@@ -61,3 +60,7 @@ export const CardWrapper = forwardRef((props: any, passedRef: any) => {
     </div>
   );
 });
+
+CardWrapper.displayName = 'CardWrapper';
+
+export default CardWrapper;

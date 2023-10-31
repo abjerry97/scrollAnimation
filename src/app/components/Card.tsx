@@ -1,6 +1,7 @@
+"use client"
 import React from "react";
 
-export const Card = React.forwardRef((props: any, ref: any) => {
+  const Card = React.forwardRef((props: any, ref: any) => {
   const { index, color } = props;
   return (
     <div
@@ -14,3 +15,9 @@ export const Card = React.forwardRef((props: any, ref: any) => {
     </div>
   );
 });
+
+
+
+Card.displayName = 'Card';
+
+export default Card;

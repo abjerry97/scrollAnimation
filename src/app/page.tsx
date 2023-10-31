@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { createRef, useEffect, useRef, useState } from "react";
-import { CardWrapper } from "./components/CardWrapper";
+import { createRef, useEffect, useRef, useState } from "react"; 
+import CardWrapper from "./components/CardWrapper";
 
 export default function Home() {
   const images = [

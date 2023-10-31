@@ -18,10 +18,34 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+ 
+
+.bay-card-wrapper {
+  -webkit-animation: marquee 1s linear infinite;
+  animation: marquee 1s linear infinite
+}
+
+
+.bay-card-wrapper.wrapper1 {
+  bottom: -100%;
+  margin-left: 1rem;
+}
+
+@-webkit-keyframes marquee {
+  100% { 
+    transform: translateY(-66.6666%);  
+  }
+}
+
+@keyframes marquee {
+  100% { 
+    transform: translateY(-66.6666%);  
+  }
 }
